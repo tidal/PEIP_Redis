@@ -33,7 +33,7 @@ class RedisCommandTestSuite extends PHPUnit_Framework_TestCase {
         $value = 'foo';
         $timeout = 1;
         $time1 = microtime(1);
-        $queue = new PEIP_Redis\Queue\Queue($this->redis, $key);
+        $queue = new PEIP_Redis\Queue\Queue($this->redis, $key, $timeout); 
         $queue->dequeue();
         $this->assertGreaterThanOrEqual($time1 + $timeout, microtime(1));
     }
