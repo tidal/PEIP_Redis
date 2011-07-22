@@ -18,7 +18,8 @@ namespace PEIP_Redis\Queue;
  * @package PEIP_Redis
  */
 
-class Queue {
+class Queue
+    implements \PEIP\INF\Queue\Queue {
 
     protected 
         $client,
